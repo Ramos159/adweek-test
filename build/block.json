@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/blog-list-block",
+  "version": "0.1.0",
+  "title": "Blog List Block",
+  "category": "widgets",
+  "description": "A list of Blog entries with some settings for customization",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "numberOfPostsToDisplay": {
+      "type": "integer",
+      "default": 1
+    },
+    "certainPostCategory": {
+      "type": "integer",
+      "default": 0
+    },
+    "showPostThumbnail": {
+      "type": "boolean"
+    }
+  },
+  "textdomain": "blog-list-block",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php",
+  "editorStyle": "file:./build/index.css",
+  "style": "file:./build/style-index.css"
+}
