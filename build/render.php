@@ -15,6 +15,8 @@
 	$category_name = get_cat_name($category_id);
 
 ?>
+
+<!-- once again, i couldn't get the styles from files to show up and i already spent a considerable amount of time on this. so inline styles were used here -->
 <div <?php echo get_block_wrapper_attributes(); ?>>
 	<h2>Latest <?php echo $category_name; ?> Blogs</h2>
 	<?php if($posts->have_posts()) : while($posts->have_posts()) : $posts->the_post()?>
@@ -35,19 +37,3 @@
 		<p>No Posts</p>
 	<?php endif; ?>
 </div>
-
-		<!-- <div style={styles.blogListOuter}>
-			{
-				showPostThumbnail ? (
-					<div style={post.featured_image_src ? {width: "33.33%", backgroundImage: `url(${post.featured_image_src})`, backgroundPosition: "center", backgroundSize: "cover" } : styles.imageNotAvailable}>
-						{post.featured_image_src ? null : <p style={{textAlign: "center"}}>No Featured Image</p>}
-					</div>
-				) : null
-			}
-			<div style={ showPostThumbnail ? styles.blogContentSmall : null}>
-				<a href={post.link} target="_blank" ><h2>{post.title.rendered}</h2></a>
-				{parse(post.excerpt.rendered)}
-				<p>By <a href={post.author_info.author_link} target="_blank">{post.author_info.display_name}</a></p>
-			</div>
-		</div> -->
-
